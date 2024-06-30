@@ -25,7 +25,7 @@ function App() {
       <NavBar />
       <Routes>
         <Route exact path="/" element={<HomePage />} />
-        <Route exact path="/new" element={<NewArticlesPage />} />
+        <Route exact path="/new_articles" element={<NewArticlesPage />} />
         <Route exact path="/explore" element={<ExplorePage />} />
         <Route exact path="/explore/:category" element={<CategoryPage />} />
         <Route exact path="/post" element={<PostPage />} />
