@@ -10,6 +10,7 @@ import ExplorePage from './pages/ExplorePage'
 import CategoryPage from './pages/CategoryPage'
 import PostPage from './pages/PostPage'
 import ArticlePage from './pages/ArticlePage'
+import EditArticlePage from '.pages/EditArticlePage'
 
 // API URL
 const apiURL = 'http://localhost:8000'
@@ -22,7 +23,6 @@ function App() {
     <div className="App">
       <h1>HanGlobe</h1>
       <NavBar />
-      <h2>My Article List</h2>
       <Routes>
         <Route exact path="/" element={<HomePage />} />
         <Route exact path="/new" element={<NewArticlesPage />} />
@@ -30,6 +30,7 @@ function App() {
         <Route exact path="/explore/:category" element={<CategoryPage />} />
         <Route exact path="/post" element={<PostPage />} />
         <Route exact path="/articles/:article_id" element={<ArticlePage />} />
+        <Route exact path="/articles/:article_id/edit" element={<EditArticlePage />} />
       </Routes>
     </div>
   )
