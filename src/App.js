@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+// import components
+
+// import hooks
+import { useState, useEffect } from 'react'
+// import components from React Router
+import { Route, Routes } from 'react-router-dom'
+
+// our API URL
+const apiURL = 'http://localhost:8000'
 
 function App() {
+  // setup state for our Posts
+  const [posts, setPosts] = useState([])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      
     </div>
   );
 }
 
-export default App;
+export default App
