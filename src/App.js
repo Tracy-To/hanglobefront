@@ -1,6 +1,5 @@
 import './App.css'
 import { useState, useEffect } from 'react'
-import { BrowserRouter as Router } from 'react-router-dom'
 import { Route, Routes } from 'react-router-dom'
 
 // import components 
@@ -20,21 +19,19 @@ function App() {
   const [posts, setPosts] = useState([])
 
   return (
-    <Router>
-      <div className="App">
-        <h1>HanGlobe</h1>
-        <NavBar />
-        <h2>My Article List</h2>
-        <Routes>
-          <Route exact path="/" element={<HomePage />} />
-          <Route exact path="/new" element={<NewArticlesPage />} />
-          <Route exact path="/explore" element={<ExplorePage />} />
-          <Route exact path="/explore/:category" element={<CategoryPage />} />
-          <Route exact path="/post" element={<PostPage />} />
-          <Route exact path="/articles/:article_id" element={<ArticlePage />} />
-        </Routes>
-      </div>
-    </Router>
+    <div className="App">
+      <h1>HanGlobe</h1>
+      <NavBar />
+      <h2>My Article List</h2>
+      <Routes>
+        <Route exact path="/" element={<HomePage />} />
+        <Route exact path="/new" element={<NewArticlesPage />} />
+        <Route exact path="/explore" element={<ExplorePage />} />
+        <Route exact path="/explore/:category" element={<CategoryPage />} />
+        <Route exact path="/post" element={<PostPage />} />
+        <Route exact path="/articles/:article_id" element={<ArticlePage />} />
+      </Routes>
+    </div>
   )
 }
 
