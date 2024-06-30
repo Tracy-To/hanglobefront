@@ -1,23 +1,41 @@
 import './App.css'
-// import components
-
-// import hooks
 import { useState, useEffect } from 'react'
-// import components from React Router
+import { BrowserRouter as Router } from 'react-router-dom'
 import { Route, Routes } from 'react-router-dom'
 
-// our API URL
+// import components 
+import NavBar from './components/NavBar'
+import HomePage from './pages/HomePage'
+import NewArticlesPage from './pages/NewArticlesPage'
+import ExplorePage from './pages/ExplorePage'
+import CategoryPage from './pages/CategoryPage'
+import PostPage from './pages/PostPage'
+import ArticlePage from './pages/ArticlePage'
+
+// API URL
 const apiURL = 'http://localhost:8000'
 
 function App() {
-  // setup state for our Posts
+  // setup state for posts
   const [posts, setPosts] = useState([])
 
   return (
-    <div className="App">
-      
-    </div>
-  );
+    <Router>
+      <div className="App">
+        <h1>HanGlobe</h1>
+        <NavBar />
+        <h2>My Article List</h2>
+        <Routes>
+          <Route exact path="/" element={<HomePage />} />
+          <Route exact path="/new" element={<NewArticlesPage />} />
+          <Route exact path="/explore" element={<ExplorePage />} />
+          <Route exact path="/explore/:category" element={<CategoryPage />} />
+          <Route exact path="/post" element={<PostPage />} />
+          <Route exact path="/articles/:article_id" element={<ArticlePage />} />
+        </Routes>
+      </div>
+    </Router>
+  )
 }
 
 export default App
