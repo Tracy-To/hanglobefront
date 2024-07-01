@@ -5,7 +5,7 @@ const CategoryPage = () => {
   // use useParams to get the category slug from the URL
   const { category } = useParams()
 
-  // create an object to link each slug to its corresponding category name
+  // link each slug to its corresponding category name
   const categoryNames = {
     sights_landmarks: 'Sights & Landmarks',
     cities_towns: 'Cities & Towns',

@@ -1,6 +1,6 @@
 import React from 'react'
 
-// create an object to link each backend category name to its user-friendly version
+// link each backend name to its frontend name 
 const categoryNames = {
   sights_landmarks: 'Sights & Landmarks',
   cities_towns: 'Cities & Towns',
@@ -12,7 +12,7 @@ const categoryNames = {
 }
 
 const ArticleCard = ({article}) => {
-  // get the user-friendly name based on the backend one
+  // get the frontend name based on the backend name
   const categoryName = categoryNames[article.category] || article.category
 
   return (
