@@ -1,7 +1,12 @@
 import React from 'react'
+import SiteInfo from '../components/SiteInfo'
 
 const HomePage = (props) => {
-  return <h1>Home Page</h1>
+  return (
+    <div>
+      <SiteInfo />
+    </div>
+  )
 }
 
 export default HomePage
