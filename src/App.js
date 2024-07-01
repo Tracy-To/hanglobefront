@@ -20,8 +20,17 @@ function App() {
   const [posts, setPosts] = useState([])
 
   // functions
+  const getArticles = async () => {
+    const response = await fetch(apiURL + '/articles/')
+    const data = await response.json()
+    console.log(data)
+    setPosts(data)
+  }
 
   // useEffect
+  useEffect(() => {
+    getArticles()
+  }, [])
 
   return (
     <div className="App">
