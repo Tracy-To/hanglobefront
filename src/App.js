@@ -13,7 +13,7 @@ import ArticlePage from './pages/ArticlePage'
 import EditArticlePage from './pages/EditArticlePage'
 
 // API URL
-const apiURL = 'http://localhost:8000'
+export const apiURL = 'https://hanglobe-b620817ad35f.herokuapp.com'
 
 function App() {
   // setup state for posts

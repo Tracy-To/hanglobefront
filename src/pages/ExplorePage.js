@@ -1,7 +1,13 @@
 import React from 'react'
+import CategoryList from '../components/CategoryList'
 
 const ExplorePage = (props) => {
-  return <h1>Explore Page</h1>
+  return (
+    <div>
+      <h1>Explore Categories</h1>
+      <CategoryList />
+    </div>
+  )
 }
 
 export default ExplorePage
