@@ -16,15 +16,15 @@ import EditArticlePage from './pages/EditArticlePage'
 export const apiURL = 'https://hanglobe-b620817ad35f.herokuapp.com'
 
 function App() {
-  // setup state for posts
-  const [posts, setPosts] = useState([])
+  // setup state for articles
+  const [articles, setArticles] = useState([])
 
   // functions
   const getArticles = async () => {
     const response = await fetch(apiURL + '/articles/')
     const data = await response.json()
     console.log(data)
-    setPosts(data)
+    setArticles(data)
   }
 
   // useEffect
@@ -38,7 +38,7 @@ function App() {
       <NavBar />
       <Routes>
         <Route exact path="/" element={<HomePage />} />
-        <Route exact path="/new_articles" element={<NewArticlesPage />} />
+        <Route exact path="/new_articles" element={<NewArticlesPage articles={articles} />} />
         <Route exact path="/explore" element={<ExplorePage />} />
         <Route exact path="/explore/:category" element={<CategoryPage />} />
         <Route exact path="/post" element={<PostPage />} />

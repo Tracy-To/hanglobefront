@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const CategoryList = () => {
   // define categories
   const categories = [
-    // using category.slug for user-friendly URLS
+    // using category.slug for site URLS
     { id: 1, name: 'Sights & Landmarks', slug: 'sights_landmarks' },
     { id: 2, name: 'Cities & Towns', slug: 'cities_towns' },
     { id: 3, name: 'Food & Dining', slug: 'food_dining' },
