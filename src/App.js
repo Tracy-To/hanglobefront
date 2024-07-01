@@ -10,7 +10,7 @@ import ExplorePage from './pages/ExplorePage'
 import CategoryPage from './pages/CategoryPage'
 import PostPage from './pages/PostPage'
 import ArticlePage from './pages/ArticlePage'
-import EditArticlePage from '.pages/EditArticlePage'
+import EditArticlePage from './pages/EditArticlePage'
 
 // API URL
 const apiURL = 'http://localhost:8000'
@@ -18,6 +18,10 @@ const apiURL = 'http://localhost:8000'
 function App() {
   // setup state for posts
   const [posts, setPosts] = useState([])
+
+  // functions
+
+  // useEffect
 
   return (
     <div className="App">
