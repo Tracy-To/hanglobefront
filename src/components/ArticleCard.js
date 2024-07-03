@@ -15,6 +15,32 @@ const ArticleCard = ({article}) => {
   // get the frontend name based on the backend name
   const categoryName = categoryNames[article.category] || article.category
 
+  // format the 'created_at' and 'updated_at' dates
+  const formattedCreatedAt = new Date(article.created_at).toLocaleDateString('en-US', {
+    // ex. 2024
+    year: 'numeric',
+    // ex. July
+    month: 'long',
+    // ex. 2
+    day: 'numeric'
+  })
+
+  const formattedUpdatedAt = new Date(article.updated_at).toLocaleDateString('en-US', {
+    // ex. 2024
+    year: 'numeric',
+    // ex. July
+    month: 'long',
+    // ex. 2
+    day: 'numeric'
+  })
+
+  // create Date objects without microseconds for comparison
+  const createdAt = new Date(article.created_at).setMilliseconds(0)
+  const updatedAt = new Date(article.updated_at).setMilliseconds(0)
+
+  // check if article has been updated
+  const hasBeenUpdated = createdAt !== updatedAt
+
   return (
     <div>
       <h2>{article.title}</h2>
@@ -22,6 +48,8 @@ const ArticleCard = ({article}) => {
       <p>{article.content.slice(0, 25)}</p>
       {article.media && <img src={article.media} alt="" />}
       {article.author && <p>Written by: {article.author}</p>}
+      <p>Written on: {formattedCreatedAt}</p>
+      {hasBeenUpdated && <p>Last updated on: {formattedUpdatedAt}</p>}
     </div>
   )
 }
