@@ -1,7 +1,8 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
+import ArticleCard from '../components/ArticleCard'
 
-const CategoryPage = () => {
+const CategoryPage = ({articles}) => {
   // use useParams to get the category slug from the URL
   const { category } = useParams()
 
@@ -19,10 +20,15 @@ const CategoryPage = () => {
   // get the category name based on the slug
   const categoryName = categoryNames[category] || 'Category'
 
+  // filter articles based on their category
+  const filteredArticles = articles.filter(article => article.category === category)
+
   return (
     <div>
       <h1>{categoryName}</h1>
-      <h2>Category specific articles</h2>
+      {filteredArticles.map(article => (
+        <ArticleCard key={article.id} article={article} />
+      ))}
     </div>
   )
 }

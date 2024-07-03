@@ -40,7 +40,7 @@ function App() {
         <Route exact path="/" element={<HomePage />} />
         <Route exact path="/new_articles" element={<NewArticlesPage articles={articles} />} />
         <Route exact path="/explore" element={<ExplorePage />} />
-        <Route exact path="/explore/:category" element={<CategoryPage />} />
+        <Route exact path="/explore/:category" element={<CategoryPage articles={articles} />} />
         <Route exact path="/post" element={<PostPage />} />
         <Route exact path="/articles/:article_id" element={<ArticlePage />} />
         <Route exact path="/articles/:article_id/edit" element={<EditArticlePage />} />
