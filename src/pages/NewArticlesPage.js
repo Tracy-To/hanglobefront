@@ -2,10 +2,13 @@ import React from 'react'
 import ArticleCard from '../components/ArticleCard'
 
 const NewArticlesPage = ({articles}) => {
+  // sort articles by 'created_at' date in descending order
+  const sortedArticles = [...articles].sort((a, b) => new Date(b.created_at) - new Date(a.created_at))
+
   return (
     <div>
       <h1>New Articles Page</h1>
-      {articles.map(article => (
+      {sortedArticles.map(article => (
         <ArticleCard key={article.id} article={article} />
       ))}
     </div>

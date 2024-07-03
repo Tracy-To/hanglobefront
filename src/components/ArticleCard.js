@@ -18,9 +18,9 @@ const ArticleCard = ({article}) => {
   return (
     <div>
       <h2>{article.title}</h2>
+      <p>Category: {categoryName}</p>
       <p>{article.content.slice(0, 25)}</p>
       {article.media && <img src={article.media} alt="" />}
-      <p>Category: {categoryName}</p>
       {article.author && <p>Written by: {article.author}</p>}
     </div>
   )
