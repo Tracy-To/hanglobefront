@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 // link each backend name to its frontend name 
 const categoryNames = {
@@ -43,7 +44,9 @@ const ArticleCard = ({article}) => {
 
   return (
     <div>
-      <h2>{article.title}</h2>
+      <h2>
+        <Link to={`/articles/${article.id}`}>{article.title}</Link>
+      </h2>
       <p>Category: {categoryName}</p>
       <p>{article.content.slice(0, 25)}</p>
       {article.media && <img src={article.media} alt="" />}
