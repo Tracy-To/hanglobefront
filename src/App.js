@@ -10,7 +10,7 @@ import ExplorePage from './pages/ExplorePage'
 import CategoryPage from './pages/CategoryPage'
 import PostPage from './pages/PostPage'
 import ArticlePage from './pages/ArticlePage'
-import EditArticlePage from './pages/EditArticlePage'
+import EditPage from './pages/EditPage'
 
 // API URL
 export const apiURL = 'https://hanglobe-b620817ad35f.herokuapp.com'
@@ -43,7 +43,7 @@ function App() {
         <Route exact path="/explore/:category" element={<CategoryPage articles={articles} />} />
         <Route exact path="/post" element={<PostPage />} />
         <Route exact path="/articles/:article_id" element={<ArticlePage />} />
-        <Route exact path="/articles/:article_id/edit" element={<EditArticlePage />} />
+        <Route exact path="/articles/:article_id/edit" element={<EditPage />} />
       </Routes>
     </div>
   )
