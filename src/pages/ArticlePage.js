@@ -18,7 +18,7 @@ const ArticlePage = (props) => {
 
   return (
     <div>
-      {article ? <ArticleDetails article={article} /> : <p>Loading...</p>}
+      {article ? <ArticleDetails article={article} /> : <p></p>}
     </div>
   )
 }

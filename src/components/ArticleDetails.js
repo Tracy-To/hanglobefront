@@ -1,6 +1,8 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
+import { apiURL } from '../App'
 
-// the same as ArticleCard.js but this does not splice the content
+// the same as ArticleCard.js, but this does not splice the content and this has edit and delete buttons
 
 // link each backend name to its frontend name 
 const categoryNames = {
@@ -14,6 +16,8 @@ const categoryNames = {
 }
 
 const ArticleDetails = ({article}) => {
+  const navigate = useNavigate()
+
   // get the frontend name based on the backend name
   const categoryName = categoryNames[article.category] || article.category
 
@@ -39,9 +43,23 @@ const ArticleDetails = ({article}) => {
   // create Date objects without microseconds for comparison
   const createdAt = new Date(article.created_at).setMilliseconds(0)
   const updatedAt = new Date(article.updated_at).setMilliseconds(0)
-
   // check if article has been updated
   const hasBeenUpdated = createdAt !== updatedAt
+
+  const handleEdit = () => {
+    navigate(`/articles/${article.id}/edit`)
+  }
+
+  const handleDelete = async () => {
+    // adding a confirm window so users can make sure
+    const confirmed = window.confirm("Are you sure you want to delete this article?")
+    if (confirmed) {
+      await fetch(`${apiURL}/articles/${article.id}/`, {
+        method: 'DELETE',
+      })
+      navigate('/')
+    }
+  }
 
   return (
     <div>
@@ -52,6 +70,11 @@ const ArticleDetails = ({article}) => {
       {article.author && <p>Written by: {article.author}</p>}
       <p>Written on: {formattedCreatedAt}</p>
       {hasBeenUpdated && <p>Last updated on: {formattedUpdatedAt}</p>}
+      <div>
+        <button onClick={handleEdit}>Edit Article</button>
+        <br /> <br />
+        <button onClick={handleDelete}>Delete Article</button>
+      </div>
     </div>
   )
 }
