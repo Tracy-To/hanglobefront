@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import PostForm from '../components/PostForm'
 import { apiURL } from '../App'
 
-const PostPage = () => {
+const PostPage = (props) => {
   const navigate = useNavigate()
 
   const handleSubmit = async (formData) => {

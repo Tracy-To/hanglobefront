@@ -48,7 +48,7 @@ const ArticleCard = ({article}) => {
         <Link to={`/articles/${article.id}`}>{article.title}</Link>
       </h2>
       <p>Category: {categoryName}</p>
-      <p>{article.content.slice(0, 25)}</p>
+      <p>{article.content.slice(0, 50)}</p>
       {article.media && <img src={article.media} alt="" />}
       {article.author && <p>Written by: {article.author}</p>}
       <p>Written on: {formattedCreatedAt}</p>
