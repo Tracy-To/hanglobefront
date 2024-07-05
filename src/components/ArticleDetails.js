@@ -66,7 +66,7 @@ const ArticleDetails = ({article}) => {
       <h2>{article.title}</h2>
       <p>Category: {categoryName}</p>
       <p>{article.content}</p>
-      {article.media && <img src={article.media} alt="" />}
+      {article.media && <img src={article.media} alt="" style={{ width: '100%', height: 'auto', maxWidth: '400px' }} />}
       {article.author && <p>Written by: {article.author}</p>}
       <p>Written on: {formattedCreatedAt}</p>
       {hasBeenUpdated && <p>Last updated on: {formattedUpdatedAt}</p>}
@@ -74,6 +74,7 @@ const ArticleDetails = ({article}) => {
         <button onClick={handleEdit}>Edit Article</button>
         <br /> <br />
         <button onClick={handleDelete}>Delete Article</button>
+        <br /> <br />
       </div>
     </div>
   )

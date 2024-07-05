@@ -20,8 +20,10 @@ const CategoryPage = ({articles}) => {
   // get the category name based on the slug
   const categoryName = categoryNames[category] || 'Category'
 
-  // filter articles based on their category
-  const filteredArticles = articles.filter(article => article.category === category)
+  // filter articles based on their category and sort by newest first
+  const filteredArticles = articles
+    .filter(article => article.category === category)
+    .sort((a, b) => new Date(b.created_at) - new Date(a.created_at))
 
   return (
     <div>

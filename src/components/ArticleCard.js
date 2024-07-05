@@ -49,7 +49,7 @@ const ArticleCard = ({article}) => {
       </h2>
       <p>Category: {categoryName}</p>
       <p>{article.content.slice(0, 50)}</p>
-      {article.media && <img src={article.media} alt="" />}
+      {article.media && <img src={article.media} alt="" style={{ width: '50%', height: 'auto', maxWidth: '200px' }} />}
       {article.author && <p>Written by: {article.author}</p>}
       <p>Written on: {formattedCreatedAt}</p>
       {hasBeenUpdated && <p>Last updated on: {formattedUpdatedAt}</p>}

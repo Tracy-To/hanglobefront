@@ -2,7 +2,7 @@ import React from 'react'
 import ArticleCard from '../components/ArticleCard'
 
 const NewArticlesPage = ({articles}) => {
-  // sort articles by 'created_at' date in descending order
+  // sort articles by newest first
   const sortedArticles = [...articles].sort((a, b) => new Date(b.created_at) - new Date(a.created_at))
 
   return (
