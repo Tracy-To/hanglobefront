@@ -65,7 +65,7 @@ const ArticleDetails = ({article}) => {
     <div style={{ maxWidth: '600px', margin: '0 auto', padding: '20px' }}>
       <h2>{article.title}</h2>
       <p>Category: {categoryName}</p>
-      <p>{article.content}</p>
+      <p style={{ whiteSpace: 'pre-wrap' }}>{article.content}</p>
       {article.media && <img src={article.media} alt="" style={{ width: '100%', height: 'auto', maxWidth: '400px' }} />}
       {article.author && <p>Written by: {article.author}</p>}
       <p>Written on: {formattedCreatedAt}</p>
