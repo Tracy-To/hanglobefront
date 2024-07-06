@@ -43,12 +43,12 @@ const ArticleCard = ({article}) => {
   const hasBeenUpdated = createdAt !== updatedAt
 
   // determine content length and add dots if necessary
-  const contentPreview = article.content.length > 50
-    ? article.content.slice(0, 50) + '. . .'
+  const contentPreview = article.content.length > 100
+    ? article.content.slice(0, 100) + '. . .'
     : article.content
 
   return (
-    <div>
+    <div style={{ maxWidth: '600px', margin: '0 auto', padding: '20px' }}>
       <h2>
         <Link to={`/articles/${article.id}`}>{article.title}</Link>
       </h2>
