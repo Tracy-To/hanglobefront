@@ -62,7 +62,7 @@ const ArticleDetails = ({article}) => {
   }
 
   return (
-    <div>
+    <div style={{ maxWidth: '600px', margin: '0 auto', padding: '20px' }}>
       <h2>{article.title}</h2>
       <p>Category: {categoryName}</p>
       <p>{article.content}</p>

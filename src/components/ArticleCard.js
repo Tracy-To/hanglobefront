@@ -42,13 +42,18 @@ const ArticleCard = ({article}) => {
   // check if article has been updated
   const hasBeenUpdated = createdAt !== updatedAt
 
+  // determine content length and add dots if necessary
+  const contentPreview = article.content.length > 50
+    ? article.content.slice(0, 50) + '. . .'
+    : article.content
+
   return (
     <div>
       <h2>
         <Link to={`/articles/${article.id}`}>{article.title}</Link>
       </h2>
       <p>Category: {categoryName}</p>
-      <p>{article.content.slice(0, 50)}</p>
+      <p>{contentPreview}</p>
       {article.media && <img src={article.media} alt="" style={{ width: '50%', height: 'auto', maxWidth: '200px' }} />}
       {article.author && <p>Written by: {article.author}</p>}
       <p>Written on: {formattedCreatedAt}</p>
