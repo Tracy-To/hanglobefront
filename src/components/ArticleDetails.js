@@ -62,19 +62,27 @@ const ArticleDetails = ({article}) => {
   }
 
   return (
-    <div style={{ maxWidth: '600px', margin: '0 auto', padding: '20px' }}>
-      <h2>{article.title}</h2>
-      <p>Category: {categoryName}</p>
-      <p style={{ whiteSpace: 'pre-wrap' }}>{article.content}</p>
-      {article.media && <img src={article.media} alt="" style={{ width: '100%', height: 'auto', maxWidth: '400px' }} />}
-      {article.author && <p>Written by: {article.author}</p>}
-      <p>Written on: {formattedCreatedAt}</p>
-      {hasBeenUpdated && <p>Last updated on: {formattedUpdatedAt}</p>}
-      <div>
-        <button onClick={handleEdit}>Edit Article</button>
-        <br /> <br />
-        <button onClick={handleDelete}>Delete Article</button>
-        <br /> <br />
+    <div className="container mx-auto bg-white rounded-xl border shadow-lg p-12 mt-20 mb-20 text-center max-w-4xl">
+      <h2 className="text-2xl font-semibold mb-8">
+        {article.title}
+      </h2>
+      <p className="text-xl italic mb-8">
+        {categoryName}
+      </p>
+      <p className="text-lg mx-auto max-w-prose whitespace-pre-wrap mb-8">
+        {article.content}
+      </p>
+      {article.media && <img src={article.media} alt="" className="rounded-lg mx-auto mb-8" style={{ width: '100%', height: 'auto', maxWidth: '300px' }} />}
+      {article.author && <p className="text-lg mb-2">{article.author}</p>}
+      <p className="text-lg mb-2">Written on: {formattedCreatedAt}</p>
+      {hasBeenUpdated && <p className="text-lg mb-2">Last updated on: {formattedUpdatedAt}</p>}
+      <div className="flex justify-center space-x-12">
+        <button onClick={handleEdit} className="bg-blue-500 text-lg text-white py-2 px-4 rounded transition duration-300 ease-in-out hover:bg-blue-700 mt-8">
+          Edit Article
+        </button>
+        <button onClick={handleDelete} className="bg-red-500 text-lg text-white py-2 px-4 rounded transition duration-300 ease-in-out hover:bg-red-700 mt-8">
+          Delete Article
+        </button>
       </div>
     </div>
   )

@@ -15,13 +15,21 @@ const CategoryList = () => {
   ]
 
   return (
-    <div>
-      {categories.map(category => (
-        <div key={category.id}>
-          <Link to={`/explore/${category.slug}`}>{category.name}</Link>
-          <br /> <br />
+    <div className="max-w-lg mx-auto">
+      <div className="bg-white p-8 rounded-lg shadow-md">
+        <div className="space-y-6">
+          {categories.map(category => (
+            <div key={category.id}>
+              <Link 
+                to={`/explore/${category.slug}`}
+                className="block text-center text-xl font-semibold transition duration-300 ease-in-out transform hover:scale-110"
+                >
+                  {category.name}
+                </Link>
+            </div>
+            ))}
         </div>
-        ))}
+      </div>
     </div>
   )
 }

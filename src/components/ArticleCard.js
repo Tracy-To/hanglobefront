@@ -48,17 +48,25 @@ const ArticleCard = ({article}) => {
     : article.content
 
   return (
-    <div style={{ maxWidth: '600px', margin: '0 auto', padding: '20px' }}>
-      <h2>
-        <Link to={`/articles/${article.id}`}>{article.title}</Link>
-      </h2>
-      <p>Category: {categoryName}</p>
-      <p>{contentPreview}</p>
-      {article.media && <img src={article.media} alt="" style={{ width: '50%', height: 'auto', maxWidth: '200px' }} />}
-      {article.author && <p>Written by: {article.author}</p>}
-      <p>Written on: {formattedCreatedAt}</p>
-      {hasBeenUpdated && <p>Last updated on: {formattedUpdatedAt}</p>}
-    </div>
+    <Link to={`/articles/${article.id}`}>
+      <div className="bg-white rounded-lg border shadow-md p-6 mb-6 max-w-md text-center transition duration-300 ease-in-out transform hover:scale-105">
+        <h2 className="text-xl font-semibold mb-4">
+          {article.title}
+        </h2>
+        <p className="text-lg mb-4 italic">
+          {categoryName}
+        </p>
+        <p>
+          {contentPreview}
+        </p>
+        {article.media && (
+          <img src={article.media} alt="" className="mt-4 mb-4 rounded-lg mx-auto" style={{ maxWidth: '200px' }} />
+        )}
+        {article.author && <p>{article.author}</p>}
+        <p>Written on: {formattedCreatedAt}</p>
+        {hasBeenUpdated && <p>Last updated on: {formattedUpdatedAt}</p>}
+      </div>
+    </Link>
   )
 }
 

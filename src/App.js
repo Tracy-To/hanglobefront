@@ -19,11 +19,11 @@ function App() {
   // setup state for articles
   const [articles, setArticles] = useState([])
 
-  // functions
+  // function to get all articles
   const getArticles = async () => {
     const response = await fetch(apiURL + '/articles/')
     const data = await response.json()
-    console.log(data)
+    // console.log(data)
     setArticles(data)
   }
 
@@ -32,9 +32,9 @@ function App() {
     getArticles()
   }, [])
 
+
   return (
-    <div className="App">
-      <h1>HanGlobe</h1>
+    <div className="bg-blue-300 min-h-screen flex flex-col">
       <NavBar />
       <Routes>
         <Route exact path="/" element={<HomePage />} />
