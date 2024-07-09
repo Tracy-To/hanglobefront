@@ -21,7 +21,7 @@ https://hanglobe.netlify.app
 
 ## Wireframes
 
-Please find the link to my original wireframes below:
+Here is the link to view my original wireframes:
 https://www.canva.com/design/DAGJXMtH_Ag/1B0jR1Dj8XGRrDbOD2qbnw/view?utm_content=DAGJXMtH_Ag&utm_campaign=designshare&utm_medium=link&utm_source=editor
 
 ## Technologies Used 
