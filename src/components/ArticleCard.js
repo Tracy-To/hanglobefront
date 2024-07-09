@@ -62,9 +62,13 @@ const ArticleCard = ({article}) => {
         {article.media && (
           <img src={article.media} alt="" className="mt-4 mb-4 rounded-lg mx-auto" style={{ maxWidth: '200px' }} />
         )}
-        {article.author && <p>{article.author}</p>}
+        {article.author && 
+          <p>{article.author}</p>
+        }
         <p>Written on: {formattedCreatedAt}</p>
-        {hasBeenUpdated && <p>Last updated on: {formattedUpdatedAt}</p>}
+        {hasBeenUpdated && 
+          <p>Last updated on: {formattedUpdatedAt}</p>
+        }
       </div>
     </Link>
   )

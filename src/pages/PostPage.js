@@ -27,8 +27,12 @@ const PostPage = (props) => {
 
   return (
     <div>
-      <h1 className="text-center font-bold text-3xl mt-10 mb-10">Post an Article</h1>
-      <h1 className="text-center text-2xl mb-10">Share your unique experiences and insights about life in Korea.</h1>
+      <h1 className="text-center font-bold text-3xl mt-10 mb-10">
+        Post an Article
+      </h1>
+      <h1 className="text-center text-2xl mb-10">
+        Share your unique experiences and insights about life in Korea.
+      </h1>
       <PostForm onSubmit={handleSubmit} />
     </div>
   )

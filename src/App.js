@@ -2,7 +2,7 @@ import './App.css'
 import { useState, useEffect } from 'react'
 import { Route, Routes } from 'react-router-dom'
 
-// import components 
+// import components and pages
 import NavBar from './components/NavBar'
 import HomePage from './pages/HomePage'
 import NewArticlesPage from './pages/NewArticlesPage'

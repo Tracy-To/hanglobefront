@@ -72,16 +72,25 @@ const ArticleDetails = ({article}) => {
       <p className="text-lg mx-auto max-w-prose whitespace-pre-wrap mb-8">
         {article.content}
       </p>
-      {article.media && <img src={article.media} alt="" className="rounded-lg mx-auto mb-8" style={{ width: '100%', height: 'auto', maxWidth: '300px' }} />}
-      {article.author && <p className="text-lg mb-2">{article.author}</p>}
+      {article.media && 
+        <img src={article.media} alt="" 
+        className="rounded-lg mx-auto mb-8" 
+        style={{ width: '100%', height: 'auto', maxWidth: '300px' }} />
+      }
+      {article.author && 
+        <p className="text-lg mb-2">{article.author}</p>}
       <p className="text-lg mb-2">Written on: {formattedCreatedAt}</p>
-      {hasBeenUpdated && <p className="text-lg mb-2">Last updated on: {formattedUpdatedAt}</p>}
+      {hasBeenUpdated && 
+        <p className="text-lg mb-2">Last updated on: {formattedUpdatedAt}</p>
+      }
       <div className="flex justify-center space-x-12">
-        <button onClick={handleEdit} className="bg-blue-500 text-lg text-white py-2 px-4 rounded transition duration-300 ease-in-out hover:bg-blue-700 mt-8">
-          Edit Article
+        <button onClick={handleEdit} 
+          className="bg-blue-500 text-lg text-white py-2 px-4 rounded transition duration-300 ease-in-out hover:bg-blue-700 mt-8">
+            Edit Article
         </button>
-        <button onClick={handleDelete} className="bg-red-500 text-lg text-white py-2 px-4 rounded transition duration-300 ease-in-out hover:bg-red-700 mt-8">
-          Delete Article
+        <button onClick={handleDelete} 
+          className="bg-red-500 text-lg text-white py-2 px-4 rounded transition duration-300 ease-in-out hover:bg-red-700 mt-8">
+            Delete Article
         </button>
       </div>
     </div>

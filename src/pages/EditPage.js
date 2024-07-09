@@ -38,8 +38,12 @@ const EditPage = (props) => {
 
   return (
     <div>
-      <h1 className="text-center font-bold text-3xl mt-10 mb-10">Edit Page</h1>
-      <h1 className="text-center text-2xl mb-10">Edit your article about life in Korea.</h1>
+      <h1 className="text-center font-bold text-3xl mt-10 mb-10">
+        Edit Page
+      </h1>
+      <h1 className="text-center text-2xl mb-10">
+        Edit your article about life in Korea.
+      </h1>
       {article ? <EditForm article={article} onSubmit={handleSubmit} /> : <p></p>}
     </div>
   )
