@@ -15,7 +15,8 @@ The categories that users can view through and post in are as follows:
 
 The app has full CRUD functionality availble to the public as of right now, but that's because the app link has only been shared to close friends and family, as well as classmates and instructors. In the near future, I am considering adding log-in functionality, allowing users to post and manage their own content only when logged in. Alternatively, I may continue allowing anyone to post without needing an account. However, the post form will require a passcode key, which will be needed to edit or delete the post. An admin passcode can override this key if necessary.
 
-Feel free to browse and the articles and share your own!
+Feel free to browse the articles and share your own!
+
 https://hanglobe.netlify.app
 
 ## Wireframes
