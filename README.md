@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+# HanGlobe
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+HanGlobe is an extensive guide to living in Korea, providing a wide array of resources and insights contributed by users and the community. “Han” refers to Korea or Korean culture, and “Globe” represents the world or a global scope. It serves as a platform where people can share their experiences, offer recommendations, give tips and advice, and help others explore and appreciate the richness of contemporary life and culture in Korea. The content is designed for anyone who is interested in learning about things in Korea, as well as for those currently living in Korea, those who have previously lived there, and those planning to live or travel there.
 
-## Available Scripts
+In HanGlobe, users can contribute content by submitting posts through a simple process. This involves users creating a post, writing content, optionally adding media, choosing a relevant category to post in, and finally reviewing and submitting their post. Once submitted, their post becomes available to the public for viewing and learning, offering additional resources and insights for the community to learn about Korea.
 
-In the project directory, you can run:
+The categories that users can view through and post in are as follows:
+- Sights & Landmarks
+- Cities & Towns
+- Food & Dining
+- Cafés
+- Activities & Leisure 
+- Daily Life Essentials
+- Travel Tips
 
-### `npm start`
+The app has full CRUD functionality availble to the public as of right now, but that's because the app link has only been shared to close friends and family, as well as classmates and instructors. In the near future, I am considering adding log-in functionality, allowing users to post and manage their own content only when logged in. Alternatively, I may continue allowing anyone to post without needing an account. However, the post form will require a passcode key, which will be needed to edit or delete the post. An admin passcode can override this key if necessary.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Feel free to browse and the articles and share your own!
+https://hanglobe.netlify.app
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Wireframes
 
-### `npm test`
+Please find the link to my original wireframes below:
+https://www.canva.com/design/DAGJXMtH_Ag/1B0jR1Dj8XGRrDbOD2qbnw/view?utm_content=DAGJXMtH_Ag&utm_campaign=designshare&utm_medium=link&utm_source=editor
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Technologies Used 
 
-### `npm run build`
+React, Django, Tailwind
+Visual Studio Code, Heroku, Netlify 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## User Stories
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- As a user, I want to be greeted on the home page and presented with information that helps me learn about the site.
+- As a user, I want there to be a nav bar so I can click on what I want to see or do next.
+- As a user, I want there to be a ‘New Articles’ tab on the nav bar so I can get a preview of the newest articles.
+- As a user, I want there to be an ‘Explore’ tab on the nav bar so I can see the all the categories for the articles.
+- As a user, I want to be able to click on a category on the Explore page so I can see all the articles related to that category. 
+- As a user, I want to be able to click on an article and read more about it. 
+- As a user, I want to be able to edit an article by clicking the edit button on its show page.
+- As a user, I want to click the edit button and be directed to an edit form pre-filled with the existing information about the article.
+- As a user, I want to be able to delete an article by clicking the delete button on its show page.
+- As a user, I want to be prompted with a confirm window after clicking the delete button just incase I pressed the button by accident or suddenly change my mind. 
+- As a user, I want there to be a ‘Post’ tab on the nav bar so I can fill out a form and share an experience with the community on the site. 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Potential Forthcoming Features
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- more information about the site and its purpose 
+- account functionality (create an account, log in, log out)
+- more tabs on the navigation bar
+- more categories for the articles
