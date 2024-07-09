@@ -62,7 +62,7 @@ const EditForm = ({ article, onSubmit }) => {
           />
         </div>
         <div>
-          <label>Media URL: </label>
+          <label>Picture URL: </label>
           <input
             type="url"
             id="media"

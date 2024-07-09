@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const CategoryList = () => {
+const CategoryList = (props) => {
   // define categories
   const categories = [
     // using category.slug for site URLS
